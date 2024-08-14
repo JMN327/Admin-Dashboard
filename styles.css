@@ -3,15 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 
-    outline: solid 1px green;
+    /* outline: solid 1px green; */
   }
   
+:root {
+  --col-back-light: hsl(219, 100%, 94%);
+}
 
   .container{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 350px minmax(280px, 1fr) 350px;
-    grid-template-rows: 150px 1fr 1fr;
+    grid-template-rows: 150px 400px 1fr;
+
+    font-family: "Roboto", sans-serif;
   }
   .sidebar{
     grid-row: 1 / 4;
@@ -22,28 +27,75 @@
   .main {
     grid-row: 2 / 4;
     grid-column: 2 / 3;
+    background-color: var(--col-back-light);
   }
   .main-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
-    gap: 15px;
-    padding: 15px;
+    gap: 24px;
+    padding: 24px;
+  }
+  .card-wrap{
+    border-radius: 8px;
+    border-left: 8px solid rgb(255, 191, 73);
+    box-shadow: 0px 4px 5px 2px rgba(173, 173, 173, 0.336);
+    padding:32px 16px 64px 24px;
+    height: 250px;
+    background-color: white;
+    
   }
   .main-title {
     /* grid-column: 1 / -1; */
-    height: 32px;
+ 
+    
+    font-size: 32px;
+    font-weight: 500;
+    padding: 40px 0px 0px 15px;
   }
   .card {
-    border-radius: 8px;
-    height: 230px;
-    
+    font-size: 1.25rem;
+    color: grey;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Number of lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
   }
+  .card h3 {
+    padding-bottom: 4px;
+    color: black;
+  } 
+  .card-icons {
+    height: 52px;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    gap: 24px;
+    padding: 8px 0px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: rgb(80, 80, 80);
+
+    }
+  }
+    svg:hover {
+      fill: orange;
+    }
+
   .announcements{
     grid-row: 2 / 3;
     grid-column: 3 / 4;
+    background-color: var(--col-back-light);
+    
   }
   .trending{
     grid-row: 3 / 4;
     grid-column: 3 / 34;
+    background-color: var(--col-back-light);
   }
+ 
