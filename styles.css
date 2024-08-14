@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    outline: solid 1px green;
+    /* outline: solid 1px green; */
   }
   
 :root {
@@ -13,9 +13,8 @@
   .container{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 350px minmax(428px, 1fr) 350px;
+    grid-template-columns: 350px minmax(428px, 1fr) 400px;
     grid-template-rows: 150px 400px 1fr;
-
     font-family: "Roboto", sans-serif;
   }
   .sidebar{
@@ -29,62 +28,60 @@
     grid-column: 2 / 3;
     background-color: var(--col-back-light);
     padding-left: 24px;
+    padding-bottom: 48px;
   }
-  .main-cards {
+  .main-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
-    padding-right: 0px;
-  }
-  .card-wrap{
-    border-radius: 8px;
-    border-left: 8px solid rgb(255, 191, 73);
-    box-shadow: 0px 4px 5px 2px rgba(173, 173, 173, 0.336);
-    padding:32px 16px 64px 24px;
-    height: 250px;
-    background-color: white;
-    
   }
   .title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     padding: 40px 0px 24px 0px;
   }
   .card {
-    font-size: 1.25rem;
+    display: grid;
+    grid-template-rows: 26px 1fr 52px;
+    border-radius: 8px;
+    border-left: 8px solid rgb(255, 191, 73);
+    box-shadow: 0px 4px 5px 2px rgba(173, 173, 173, 0.336);
+    padding:32px 16px 0 24px;
+    height: 220px; 
+    background-color: white;
+    font-size: 1rem;
     color: grey;
-    height: 100%;
+  }
+  .card-title {
+
+    color: black;
+  } 
+  .card-paragraph {
+/*     height: 100px; */
+    line-height: 1.33;
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* Number of lines */
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.2;
   }
-  .card h3 {
-    padding-bottom: 4px;
-    color: black;
-  } 
   .card-icons {
-    height: 52px;
     display: flex;
     justify-content:end;
     align-items: center;
     gap: 24px;
-    padding: 8px 0px;
 
     svg {
       width: 30px;
-      height: 30px;
+      height: 24px;
       fill: rgb(80, 80, 80);
       transform: scale(1.15);
-
     }
-  }
     svg:hover {
       fill: orange;
     }
+  }
+
 
   .announcements{
     grid-row: 2 / 3;
