@@ -13,7 +13,7 @@
   .container{
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 350px minmax(280px, 1fr) 350px;
+    grid-template-columns: 350px minmax(428px, 1fr) 350px;
     grid-template-rows: 150px 400px 1fr;
 
     font-family: "Roboto", sans-serif;
@@ -28,13 +28,14 @@
     grid-row: 2 / 4;
     grid-column: 2 / 3;
     background-color: var(--col-back-light);
+    padding-left: 24px;
   }
   .main-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 
     gap: 24px;
-    padding: 24px;
+    padding-right: 0px;
   }
   .card-wrap{
     border-radius: 8px;
@@ -45,13 +46,10 @@
     background-color: white;
     
   }
-  .main-title {
-    /* grid-column: 1 / -1; */
- 
-    
-    font-size: 32px;
+  .title {
+    font-size: 28px;
     font-weight: 500;
-    padding: 40px 0px 0px 15px;
+    padding: 40px 0px 24px 0px;
   }
   .card {
     font-size: 1.25rem;
@@ -92,11 +90,20 @@
     grid-row: 2 / 3;
     grid-column: 3 / 4;
     background-color: var(--col-back-light);
+    padding: 0px 24px;
     
   }
   .trending{
     grid-row: 3 / 4;
     grid-column: 3 / 34;
     background-color: var(--col-back-light);
+    padding: 0px 24px;
+  }
+  .right-bar-card{
+    border-left: 0px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    flex:1 0 auto;
   }
  
