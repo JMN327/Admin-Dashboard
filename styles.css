@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    /* outline: solid 1px green; */
+    outline: solid 1px green;
   }
   
 :root {
@@ -80,6 +80,7 @@
       width: 30px;
       height: 30px;
       fill: rgb(80, 80, 80);
+      transform: scale(1.15);
 
     }
   }
