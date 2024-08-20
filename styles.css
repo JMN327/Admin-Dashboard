@@ -152,7 +152,7 @@
   gap: 24px;
 }
 .command-pallet > button {
-  color: white;
+  color: rgb(255, 226, 231);
   font-family: "Gluten", cursive;
   font-size: 1.6rem;
   height: 3rem;
