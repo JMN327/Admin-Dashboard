@@ -143,6 +143,7 @@
   font-family: "Gluten", cursive;
   width: 95%;
   box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.08);
+  color: var(--col-text-alt);
 }
 .command-pallet {
   display: grid;
@@ -249,6 +250,7 @@
 }
 .card-title {
   color: var(--col-title);
+  padding-bottom: 4px;
 }
 .card-paragraph {
   line-height: 1.33;
