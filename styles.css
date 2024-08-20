@@ -37,7 +37,7 @@
 .container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 310px minmax(428px, 1fr) 350px;
+  grid-template-columns: 340px minmax(428px, 1fr) 350px;
   grid-template-rows: min-content 1fr;
   font-family: "Gluten", cursive;
   svg {
@@ -53,6 +53,7 @@
   align-content: start;
   align-items: center;
   gap: 3rem;
+  padding-left: 8px;
   background: var(--col-sidebar); /* rgb(103, 166, 185); */
   color: white;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.616);
@@ -99,7 +100,7 @@
   grid-column: 2 / 4;
   background: var(--col-header);
   position: relative;
-  padding: 24px 60px;
+  padding: 24px 60px 32px 60px;
   column-gap: 36px;
   row-gap: 24px;
 
@@ -161,10 +162,9 @@
   /* background: hsl(0, 80%, 71%); */
   background: var(--col-text-alt);
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.836);
-
 }
 .command-pallet > button:hover {
-  color:var(--col-sb-highlight);
+  color: var(--col-sb-highlight);
 }
 
 .user-greeting {
